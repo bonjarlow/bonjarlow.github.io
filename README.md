@@ -4,7 +4,9 @@ You can use the [editor on GitHub](https://github.com/bonjarlow/bonjarlow.github
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-![Image]({{bonjarlow.github.io}}/099.jpg)
+<p align="center">
+  <img width="600" height="200" src="https://bonjarlow.github.io/099.jpg">
+</p>
 
 ### Markdown
 
