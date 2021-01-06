@@ -1,0 +1,31 @@
+/***
+
+    P R O C E S S I N G . J S - 1.4.1
+    a port of the Processing visualization language
+
+    Processing.js is licensed under the MIT License, see LICENSE.
+    For a list of copyright holders, please refer to AUTHORS.
+
+    http://processingjs.org
+
+***/
+
+(function(window, document, Math, undef) {
+    var nop = function() {};
+    var debug = function() {
+	if ("console" in window) return function(msg) {
+		window.console.log("Processing.js: " + msg)
+	    };
+    return nop
+    }();
+    var ajax = function(url) {
+	var xhr = new XMLHttpRequest;
+	xhr.open("GET", url, false);
+	if (xhr.overrideMimeType) xhr.overrideMimeType("text/plain");
+	xhr.setRequestHeader("If-Modified-Since", "Fri, 01 Jan 1960 00:00:00 GMT");
+	xhr.send(null);
+	if (xhr.status !== 200 && xhr.status !== 0) throw "XMLHttpRequest failed, status code " + xhr.status;
+    return xhr.responseText
+    };
+    var isDOMPresent = "document" in this && !("fake" in this.document);
+  document.head = document.head || document.getElementsByTagNam
