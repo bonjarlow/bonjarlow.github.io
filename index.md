@@ -18,12 +18,13 @@ layout: home
         void setup() {
             size(500,500);
             background(255);
-            pos = 0.0;
+            pos = 250.0;
         }
         
         void draw() {
-            pos += random(-1,1);
-            line(0,pos,0,pos)
+            pos += random(-10,10);
+	    noFill();
+            ellipse(pos,pos,pos,pos)
         }
 
 		</script>
