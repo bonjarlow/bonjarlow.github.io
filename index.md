@@ -37,8 +37,8 @@ layout: home
 	}
 
 	void setSpirals() {
-	  a = new Spiral(6*width/10, height/2, 1);
-	  b = new Spiral(4*width/10, height/2, -1);
+	  a = new Spiral(6*width/10, height/3, 1);
+	  b = new Spiral(4*width/10, height/3, -1);
 	}
 
 	class Spiral {
