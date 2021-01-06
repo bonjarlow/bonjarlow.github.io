@@ -1,3 +1,7 @@
+---
+layout: home
+---
+
 <html>
 	<head>
 		<title>My Sketch</title>
@@ -12,9 +16,9 @@
         float pos;
     
         void setup() {
-            size(500,500);
+            size(1000,1000);
             background(255);
-            pos = 250.0;
+            pos = 500.0;
         }
         
         void draw() {
@@ -30,7 +34,3 @@
 		<canvas> </canvas>
 	</body>
 </html>
-
----
-layout: home
----
