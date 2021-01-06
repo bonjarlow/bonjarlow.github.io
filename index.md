@@ -13,26 +13,65 @@ layout: home
 	<body>
 	<script type="application/processing">
     
-        float pos;
-    
-        void setup() {
-            size(500,500);
-            background(255);
-            pos = 250.0;
-        }
-        
-        void draw() {
-            pos += random(-10,10);
-	    noFill();
-	    ellipse(0,0,10,10);
-	    ellipse(width,0,15,15);
-	    ellipse(0,height,5,5);
-            ellipse(pos,250,random(10,20),random(10,20));
-	    if (frameCount % 10 == 0) {
-	    	background(255);
-	    }
-        }
+        int dx = 0;
+	Spiral a;
+	Spiral b;
 
+	void setup() {
+	  size(400,400);
+	  background(0);
+	  setSpirals();
+	}
+
+	void draw() {
+	  frameRate(40);
+	  background(0);
+	  noFill();
+	  stroke(255);
+	  strokeWeight(1);
+
+	  a.render();
+	  b.render();
+	  a.update();
+	  b.update();
+	}
+
+	void setSpirals() {
+	  a = new Spiral(6*width/10, height/2, 1);
+	  b = new Spiral(4*width/10, height/2, -1);
+	}
+
+	class Spiral {
+	  int xpos, ypos, dir;
+
+	  Spiral(int _xpos, int _ypos, int _dir) {
+	    xpos = _xpos;
+	    ypos = _ypos;
+	    dir = _dir;
+	  }
+
+	  void update() {
+
+	    if (dir == 1) {
+	      xpos += 1;
+	    }
+	    if (dir == -1) {
+	      xpos -= 1;
+	    }
+	    if (xpos > 6*width/10) {
+	      dir = -1;
+	    }
+	    if (xpos < 4*width/10) {
+	      dir = 1;
+	    }
+	  }
+
+	  void render() {
+	    for (int i = 0; i < 25; i++) {
+	      ellipse(xpos, ypos, i+30*i, i+30*i);
+	    }
+	  }
+	}
 	</script>
 	<canvas> </canvas>
 	</body>
