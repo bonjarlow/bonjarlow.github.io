@@ -1,7 +1,3 @@
----
-layout: home
----
-
 <html>
 	<head>
 		<title>My Sketch</title>
@@ -24,10 +20,17 @@ layout: home
         void draw() {
             pos += random(-10,10);
 	    noFill();
-            ellipse(pos,pos,pos,pos)
+            ellipse(pos,pos,pos,pos);
+	    if (frameCount % 10 == 0) {
+	    background(255);
+	    }
         }
 
 		</script>
 		<canvas> </canvas>
 	</body>
 </html>
+
+---
+layout: home
+---
