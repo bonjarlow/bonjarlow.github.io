@@ -2,10 +2,13 @@
 layout: post
 ---
 
-<video controls="controls" width="800" height="600" 
-       name="Video Name" src="https://bonjarlow.github.io/video3.mov"></video>
-
-<script type="text/javascript" src="processing.js"></script>
+<html>
+<head>
+  <script type="text/javascript" src="processing.js"></script>
+</head>
+<body>
 
 <canvas data-processing-sources="pulseoscillator2.pde"></canvas>
 
+</body>
+</html>
