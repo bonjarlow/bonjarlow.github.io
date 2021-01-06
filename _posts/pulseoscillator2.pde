@@ -26,23 +26,19 @@ void setup() {
   ylen = height/den;
 
   phases = new float[xlen][ylen];
-  angv = new float[xlen][ylen];
 
   for (int i = 0; i < xlen; i++) {
     for (int j = 0; j < ylen; j++) {
       phases[i][j] = random(0, TWO_PI);
-      angv[i][j] = randomGaussian() + 1;
     }
   }
 }
 
 void draw() {
-  //frameRate(60);
   noStroke();
   background(0);
   calcphase();
   render();
-  //saveFrame("line-######.jpg");
 }
 
 void calcphase() {
@@ -62,7 +58,6 @@ void calcphase() {
       }
       
       delta *= couple;
-      //delta += angv[i][j];
       delta += omega;
       delta *= dt;
       
@@ -135,24 +130,4 @@ float[] getnbrs(int i, int j) {
   
   return nbrphases;
   
-}
-
-void keyReleased() {
-  float dk = 0.1;
-  float dw = 0.1;
-  
-  if (keyCode == UP) {
-    couple += dk;
-  }
-  if (keyCode == DOWN) {
-    couple -= dk;
-  }
-  if (keyCode == LEFT) {
-    omega -= dw;
-  }
-  if (keyCode == RIGHT) {
-    omega += dw;
-  }
-  
-  println("omega: " + omega, "k: " + couple);
 }
