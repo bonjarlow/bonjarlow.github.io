@@ -19,15 +19,15 @@ layout: home
 
 	void setup() {
 	  size(400,400);
-	  background(0);
+	  background(255);
 	  setSpirals();
 	}
 
 	void draw() {
 	  frameRate(40);
-	  background(0);
+	  background(255);
 	  noFill();
-	  stroke(255);
+	  stroke(0);
 	  strokeWeight(1);
 
 	  a.render();
@@ -67,7 +67,7 @@ layout: home
 	  }
 
 	  void render() {
-	    for (int i = 0; i < 25; i++) {
+	    for (int i = 0; i < 20; i++) {
 	      ellipse(xpos, ypos, i+30*i, i+30*i);
 	    }
 	  }
