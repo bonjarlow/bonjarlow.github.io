@@ -2,5 +2,6 @@
 layout: post
 ---
 
-<video width="320" height="240" controls autoplay>
-      <source src=”https://bonjarlow.github.io/video3.mov” type=video/mov>
+<video controls="controls" width="800" height="600" 
+       name="Video Name" src="https://bonjarlow.github.io/video3.mov"></video>
+
