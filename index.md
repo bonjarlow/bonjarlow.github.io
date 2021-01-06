@@ -16,9 +16,9 @@ layout: home
         float pos;
     
         void setup() {
-            size(1800,500);
+            size(500,500);
             background(255);
-            pos = 900.0;
+            pos = 250.0;
         }
         
         void draw() {
