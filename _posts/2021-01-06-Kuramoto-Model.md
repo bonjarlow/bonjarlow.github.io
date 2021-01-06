@@ -2,13 +2,7 @@
 layout: post
 ---
 
-<html>
-<head>
-  <script type="text/javascript" src="processing.js"></script>
-</head>
-<body>
+<video controls="controls" width="800" height="600" 
+       name="Video Name" src="https://bonjarlow.github.io/video3.mov"></video>
 
-<canvas data-processing-sources="pulseoscillator2.pde"></canvas>
-
-</body>
-</html>
+A grid of coupled oscillators, each interacting with their 8 nearest neighbors via a coupling constant K. The phase of the oscillator is represented as the color.
