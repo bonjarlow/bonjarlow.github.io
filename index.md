@@ -13,65 +13,36 @@ layout: home
 	<body>
 	<script type="application/processing">
     
-        int dx = 0;
-	Spiral a;
-	Spiral b;
+        float x,y,z;
+float rx, ry, rz;
 
-	void setup() {
-	  size(400,400);
-	  background(255);
-	  setSpirals();
-	}
+void setup() {
+  
+  size(500,500,P3D);
+  background(255);
+  colorMode(HSB);
+  
+  rx = random(30,120);
+  ry = random(30,120);
+  rz = random(30,120);
+  
+  x = width/2;
+  y = height/2;
+  z = 0;
+}
 
-	void draw() {
-	  frameRate(40);
-	  background(255);
-	  noFill();
-	  stroke(0);
-	  strokeWeight(1);
-
-	  a.render();
-	  b.render();
-	  a.update();
-	  b.update();
-	}
-
-	void setSpirals() {
-	  a = new Spiral(6*width/10, height/3, 1);
-	  b = new Spiral(4*width/10, height/3, -1);
-	}
-
-	class Spiral {
-	  int xpos, ypos, dir;
-
-	  Spiral(int _xpos, int _ypos, int _dir) {
-	    xpos = _xpos;
-	    ypos = _ypos;
-	    dir = _dir;
-	  }
-
-	  void update() {
-
-	    if (dir == 1) {
-	      xpos += 1;
-	    }
-	    if (dir == -1) {
-	      xpos -= 1;
-	    }
-	    if (xpos > 6*width/10) {
-	      dir = -1;
-	    }
-	    if (xpos < 4*width/10) {
-	      dir = 1;
-	    }
-	  }
-
-	  void render() {
-	    for (int i = 0; i < 20; i++) {
-	      ellipse(xpos, ypos, i+10*i, i+10*i);
-	    }
-	  }
-	}
+void draw() {
+  translate(x,y,z);
+  rotateZ(frameCount*PI/rz % TWO_PI);
+  rotateY(frameCount*PI/ry % TWO_PI);
+  rotateX(frameCount*PI/rx % TWO_PI);
+  rectMode(CENTER);
+  rect(0,0,200,200);
+  if (frameCount % 100 == 0) {
+    background(255);
+    fill(random(0,255),random(0,255),200,random(0,100));
+  }
+}
 	</script>
 	<canvas> </canvas>
 	</body>
