@@ -24,9 +24,9 @@ layout: home
         void draw() {
             pos += random(-10,10);
 	    noFill();
-            ellipse(pos,250,random(10,20),random(10,20);
+            ellipse(pos,250,random(10,20),random(10,20));
 	    if (frameCount % 10 == 0) {
-	    background(255);
+	    	background(255);
 	    }
         }
 
