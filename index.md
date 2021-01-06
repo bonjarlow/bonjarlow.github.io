@@ -67,8 +67,8 @@ layout: home
 	  }
 
 	  void render() {
-	    for (int i = 0; i < 10; i++) {
-	      ellipse(xpos, ypos, i+30*i, i+30*i);
+	    for (int i = 0; i < 20; i++) {
+	      ellipse(xpos, ypos, i+10*i, i+10*i);
 	    }
 	  }
 	}
