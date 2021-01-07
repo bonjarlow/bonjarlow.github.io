@@ -40,7 +40,7 @@ layout: home
 	  rect(0,0,100,100);
 	  if (frameCount % 100 == 0) {
 	    background(255);
-	    fill(random(0,255),random(0,255),200,random(0,100));
+	    fill(random(0,255),random(0,255),200,0);
 	  }
 	}
 	</script>
