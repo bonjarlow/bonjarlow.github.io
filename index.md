@@ -18,7 +18,7 @@ layout: home
 
 	void setup() {
 
-	  size(300,300,P3D);
+	  size(500,500,P3D);
 	  background(255);
 	  colorMode(HSB);
 
@@ -27,7 +27,7 @@ layout: home
 	  rz = random(30,120);
 
 	  x = width/2;
-	  y = height/2;
+	  y = height/3;
 	  z = 0;
 	}
 
@@ -37,7 +37,7 @@ layout: home
 	  rotateY(frameCount*PI/ry % TWO_PI);
 	  rotateX(frameCount*PI/rx % TWO_PI);
 	  rectMode(CENTER);
-	  rect(0,-20,100,100);
+	  rect(0,0,100,100);
 	  if (frameCount % 100 == 0) {
 	    background(255);
 	    fill(random(0,255),random(0,255),200,random(0,100));
