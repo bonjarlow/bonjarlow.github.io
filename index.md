@@ -41,6 +41,9 @@ layout: home
 	  if (frameCount % 100 == 0) {
 	    background(255);
 	    fill(random(0,255),random(0,255),200,0);
+	    rx = random(30,120);
+		ry = random(30,120);
+	  	rz = random(30,120);
 	  }
 	}
 	</script>
