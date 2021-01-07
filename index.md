@@ -37,7 +37,7 @@ layout: home
 	  rotateY(frameCount*PI/ry % TWO_PI);
 	  rotateX(frameCount*PI/rx % TWO_PI);
 	  rectMode(CENTER);
-	  rect(0,-30,200,200);
+	  rect(0,-50,200,200);
 	  if (frameCount % 100 == 0) {
 	    background(255);
 	    fill(random(0,255),random(0,255),200,random(0,100));
