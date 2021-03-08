@@ -19,12 +19,10 @@ void setup() {
   size(500,500);
   background(0);
   scale = width/rows;
-  //colorMode(HSB);
   //frameRate(5);
 }
 
 void draw() {
-  colorMode(HSB);
   background(0);
   ellipseMode(CORNER);
   for (int i = 0; i < rows; i++) {
