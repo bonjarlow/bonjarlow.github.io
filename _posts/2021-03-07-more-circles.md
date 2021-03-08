@@ -16,7 +16,7 @@ float scale;
 float z = 0;
 
 void setup() {
-  size(500,300);
+  size(500,500);
   background(0);
   scale = width/rows;
   //colorMode(HSB);
