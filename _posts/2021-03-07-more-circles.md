@@ -24,6 +24,7 @@ void setup() {
 }
 
 void draw() {
+  colorMode(HSB);
   background(0);
   ellipseMode(CORNER);
   for (int i = 0; i < rows; i++) {
