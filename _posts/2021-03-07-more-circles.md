@@ -18,6 +18,8 @@ void setup() {
   background(0);
   scale = width/rows;
   colorMode(HSB);
+  fill(255);
+  ellipse(20,20,20,20);
 }
 
 void draw() {
