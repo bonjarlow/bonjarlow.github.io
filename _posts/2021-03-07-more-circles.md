@@ -11,11 +11,10 @@
 int rows = 20;
 int cols = 20;
 float scale;
-
 float z = 0;
 
 void setup() {
-  size(200,200);
+  size(500,200);
   background(0);
   scale = width/rows;
   colorMode(HSB);
