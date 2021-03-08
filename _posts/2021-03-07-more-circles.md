@@ -7,7 +7,6 @@
 	</head>
 	<body>
 		<script type="application/processing">
-
 int rows = 20;
 int cols = 20;
 float scale;
@@ -37,8 +36,6 @@ void draw() {
   z += 0.03;
   //saveFrame("rp-imgs/#####.png");
 }
-
-
 		</script>
 		<canvas> </canvas>
 	</body>
