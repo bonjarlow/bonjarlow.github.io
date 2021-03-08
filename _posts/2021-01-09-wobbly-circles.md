@@ -75,7 +75,7 @@ class Spinner {
     phi += wy/100;
     rho += wz/100;
   }
-}
+  }
 		</script>
 		<canvas> </canvas>
 	</body>
