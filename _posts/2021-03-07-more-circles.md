@@ -18,10 +18,10 @@ void setup() {
   background(0);
   scale = width/rows;
   colorMode(HSB);
+  frameRate(60);
 }
 
 void draw() {
-  frameRate(60);
   //rotateX(0);
   background(0);
   ellipseMode(CORNER);
@@ -34,7 +34,6 @@ void draw() {
     }
   }
   z += 0.03;
-  //saveFrame("rp-imgs/#####.png");
 }
 		</script>
 		<canvas> </canvas>
