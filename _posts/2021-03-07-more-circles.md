@@ -19,7 +19,7 @@ void setup() {
   size(500,500);
   background(0);
   scale = width/rows;
-  colorMode(HSB);
+  //colorMode(HSB);
   //frameRate(5);
 }
 
