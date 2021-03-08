@@ -7,7 +7,8 @@
 	</head>
 	<body>
 		<script type="application/processing">
-			Spinner a,b,c,d;
+		
+Spinner a,b,c,d;
 
 void setup() {
   
