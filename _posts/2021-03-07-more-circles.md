@@ -18,11 +18,11 @@ void setup() {
   background(0);
   scale = width/rows;
   colorMode(HSB);
-  fill(255);
-  ellipse(20,20,20,20);
 }
 
 void draw() {
+  fill(255);
+  ellipse(20,20,20,20);
   background(0);
   ellipseMode(CORNER);
   for (int i = 0; i < rows; i++) {
