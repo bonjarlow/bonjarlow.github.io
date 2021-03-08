@@ -36,6 +36,7 @@ void draw() {
   z += 0.03;
   //saveFrame("rp-imgs/#####.png");
 }
+}
 		</script>
 		<canvas> </canvas>
 	</body>
