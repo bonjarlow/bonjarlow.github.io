@@ -7,75 +7,35 @@
 	</head>
 	<body>
 		<script type="application/processing">
-			Spinner a,b,c,d;
+			int rows = 20;
+			int cols = 20;
+			float scale;
+
+			float z = 0;
 
 void setup() {
-  
-  size(500,500,P3D);
-  background(#FFFFFF);
-  colorMode(RGB);
-  frameRate(20);
-  
-  color c1 = color(#FFFFFF, 3);
-  color c2 = color(#FFFFFF, 10);
-  color c3 = color(#FFFFFF, 15);
-  color c4 = color(#FFFFFF, 255);
-  
-  a = new Spinner(width/4+10,height/4+10, c1);
-  b = new Spinner(3*width/4-10,height/4+10, c2);
-  c = new Spinner(width/4+10,3*height/4-10, c3);
-  d = new Spinner(3*width/4-10,3*height/4-10, c4);
+  size(800,800);
+  background(0);
+  scale = width/rows;
+  colorMode(HSB);
 }
 
 void draw() {
-  //if (frameCount % 8 == 0) {
-    //camera(-100 + frameCount, height/2.0, (height/2.0) / tan(PI*30.0 / 180.0), 
-    //width/2.0, height/2.0, 0, 0, 1, 0);
-    a.update();
-    b.update();
-    c.update();
-    d.update();
-    //saveFrame("grid/line-######.png");
-  //}
+  frameRate(60);
+  //rotateX(0);
+  background(0);
+  ellipseMode(CORNER);
+  for (int i = 0; i < rows; i++) {
+    for (int j = 0; j < cols; j++) {
+      float size = 90*noise(i*scale*0.01, j*scale*0.01, z)+5;
+      float h = map(size,0,90,-75,75); //-75 to 75 is good
+      fill(h,175,175);
+      ellipse(i*scale, j*scale, size, size);
+    }
+  }
+  z += 0.03;
+  //saveFrame("rp-imgs/#####.png");
 }
-
-class Spinner {
-  
-  int xpos, ypos;
-  float wx, wy, wz;
-  float theta, phi, rho;
-  color c;
- 
-  Spinner(int xpos, int ypos, color c) {
-    this.xpos = xpos;
-    this.ypos = ypos;
-    this.c = c;
-    setSpin();
-  }
-  
-  void setSpin() {
-    theta = 0;
-    phi = 0;
-    rho = 0;
-    wx = random(-10,10);
-    wy = random(-10,10);
-    wz = random(-10,10);
-  }
-  
-  void update() {
-    pushMatrix();
-      translate(xpos, ypos, 0);
-      rotateX(theta);
-      rotateY(phi);
-      rotateZ(rho);
-      fill(c);
-      ellipse(0,0,2*width/6, 2*height/6);
-    popMatrix();
-    theta += wx/100;
-    phi += wy/100;
-    rho += wz/100;
-  }
-  }
 		</script>
 		<canvas> </canvas>
 	</body>
