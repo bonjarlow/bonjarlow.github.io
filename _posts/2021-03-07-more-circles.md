@@ -7,14 +7,15 @@
 	</head>
 	<body>
 		<script type="application/processing">
-			int rows = 20;
-			int cols = 20;
-			float scale;
+		
+int rows = 20;
+int cols = 20;
+float scale;
 
-			float z = 0;
+float z = 0;
 
 void setup() {
-  size(400,800);
+  size(400,400);
   background(0);
   scale = width/rows;
   colorMode(HSB);
@@ -22,7 +23,6 @@ void setup() {
 }
 
 void draw() {
-  //rotateX(0);
   background(0);
   ellipseMode(CORNER);
   for (int i = 0; i < rows; i++) {
