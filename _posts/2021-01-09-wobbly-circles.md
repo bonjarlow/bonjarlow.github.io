@@ -12,7 +12,7 @@ Spinner a,b,c,d;
 
 void setup() {
   
-  size(500,500,P3D);
+  size(200,200,P3D);
   background(#FFFFFF);
   colorMode(RGB);
   frameRate(20);
