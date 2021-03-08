@@ -14,7 +14,7 @@ float scale;
 float z = 0;
 
 void setup() {
-  size(500,200);
+  size(500,500);
   background(0);
   scale = width/rows;
   colorMode(HSB);
@@ -22,12 +22,10 @@ void setup() {
 }
 
 void draw() {
-  background(0);
   ellipseMode(CORNER);
   for (int i = 0; i < rows; i++) {
     for (int j = 0; j < cols; j++) {
-      //float size = 90*noise(i*scale*0.01, j*scale*0.01, z)+5;
-      float size = 90*(frameCount%100)/100;
+      float size = 90*noise(i*scale*0.01, j*scale*0.01, z)+5;
       float h = map(size,0,90,-75,75);
       fill(h,175,175);
       ellipse(i*scale, j*scale, size, size);
