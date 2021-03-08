@@ -22,7 +22,7 @@
         }
 
         void draw() {
-          frameRate(60);
+          //frameRate(60);
           //rotateX(0);
           background(0);
           ellipseMode(CORNER);
