@@ -14,7 +14,7 @@ color cn;
 float dist;
 
 void setup(){
-  size(1500,300);
+  size(500,500);
   colorMode(HSB,360,100,100);
   //cb = color(#3FB9F0); color(#B94F74); color(#B73A34); color(#1D2995);
   //cn = color(#055C83); color(#FFFEFA); color(#FFFFFF);
@@ -24,7 +24,7 @@ void setup(){
   background(cb);
   frameRate(30);
   ellipseMode(CENTER);
-  web = new Network(500, dist, 5);
+  web = new Network(400, dist, 5);
 }
 
 void draw(){
