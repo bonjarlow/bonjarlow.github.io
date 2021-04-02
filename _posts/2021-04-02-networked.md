@@ -20,7 +20,7 @@ void setup(){
   //cn = color(#055C83); color(#FFFEFA); color(#FFFFFF);
   cb = color(#01062E);
   cn = color(#FFFFFF);
-  dist = 40;
+  dist = 30;
   background(cb);
   frameRate(30);
   ellipseMode(CENTER);
