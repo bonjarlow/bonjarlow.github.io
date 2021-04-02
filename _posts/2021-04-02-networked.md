@@ -14,13 +14,13 @@ color cn;
 float dist;
 
 void setup(){
-  size(800,800);
+  size(1500,300);
   colorMode(HSB,360,100,100);
   //cb = color(#3FB9F0); color(#B94F74); color(#B73A34); color(#1D2995);
   //cn = color(#055C83); color(#FFFEFA); color(#FFFFFF);
   cb = color(#01062E);
   cn = color(#FFFFFF);
-  dist = 50;
+  dist = 40;
   background(cb);
   frameRate(30);
   ellipseMode(CENTER);
