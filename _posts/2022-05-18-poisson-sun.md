@@ -7,7 +7,7 @@ layout: post
 		<title>My Sketch</title>
     
     <!-- Load the Processing.js library -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.js"></script>
 	</head>
 	<body>
 		<script type="application/processing">
